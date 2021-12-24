@@ -6,14 +6,16 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad.NotepadController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="저장" />
+              <MenuItem mnemonicParsing="false" text="새 파일" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnSave" text="저장" />
+                  <MenuItem mnemonicParsing="false" text="다른 이름으로 저장" />
+                  <MenuItem mnemonicParsing="false" text="더 보기" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -30,6 +32,6 @@
       </MenuBar>
    </top>
    <center>
-      <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="txtArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
