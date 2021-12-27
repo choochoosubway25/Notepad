@@ -40,12 +40,17 @@ public class NotepadController implements Initializable {
 	public void OnSave() {
 		if (filePath == null) 
 			filePath = fileServ.SaveWindow();
-			
+		saveFile();
+	}
+	
+	public void OnSaveAs() {
+		filePath = fileServ.SaveWindow();
+		saveFile();
+	}
+
+	private void saveFile() {
 		fileServ.SaveFile(form, filePath);
 		fileServ.Insert(form, filePath);
 		fileServ.LoadRecent(form);
 	}
-
-
-	
 }

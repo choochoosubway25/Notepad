@@ -14,7 +14,7 @@
             <items>
               <MenuItem mnemonicParsing="false" text="새 파일" />
                   <MenuItem mnemonicParsing="false" onAction="#OnSave" text="저장" />
-                  <MenuItem mnemonicParsing="false" text="다른 이름으로 저장" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnSaveAs" text="다른 이름으로 저장" />
                   <MenuItem mnemonicParsing="false" text="더 보기" />
             </items>
           </Menu>
