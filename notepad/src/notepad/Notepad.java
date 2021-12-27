@@ -21,6 +21,8 @@ public class Notepad extends Application{
 		s.setScene(scene);
 		s.show();
 		
+		NotepadController ctrler = loader.getController();
+		ctrler.setForm(root);
 	}
 	
 
