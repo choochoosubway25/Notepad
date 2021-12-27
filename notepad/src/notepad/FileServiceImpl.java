@@ -117,6 +117,15 @@ public class FileServiceImpl implements iFileServ{
 	public List<String> select() {
 		return iFileDao.select();
 	}
+	@Override
+	public boolean IsChange(Parent form) {
+		String contents = getText(form);
+		int hash = getHash(contents);
+		if(oldHash == hash) return false;
+		
+		oldHash = hash;
+		return true;
+	}
 	
 
 }
